@@ -2,7 +2,11 @@ name: CI/CD for time-app project
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
+
+env:
+  REGISTRY: gchr.io
+  IMAGE_NAME: ${{github.repository}}
 
 jobs:
   test:
@@ -58,13 +62,14 @@ jobs:
         run: |
           docker build -t ${{secrets.DOCKER_USERNAME}}/time-app-front-fbes1237ru ./frontend
           docker push ${{secrets.DOCKER_USERNAME}}/time-app-front-fbes1237ru
-deploy:
+
+  deploy:
     needs: build-and-deploy
     runs-on: ubuntu-latest
     steps:
       - name: Cloning repository
         uses: actions/checkout@v4
-     
+      
       - name: Azure Debian VM Deploy
         uses: appleboy/ssh-action@v1
         with:
@@ -72,16 +77,17 @@ deploy:
           username: ${{secrets.AZURE_VM_USERNAME}}
           key: ${{secrets.AZURE_VM_SSH_KEY}}
           port: 22
- 
+
           script: |
-            if [ ! -d "/app/numa-time-app/.git" ]; then
-              git clone https://github.com/${{ github.repository }} /app/numa-time-app/.git
+            if [ ! -d "/app/numa-time-app/.git/.git" ]; then
+              git clone https://github.com/${{ github.repository }} /app/numa-time-app
             fi
-                   
-            cd /app/numa-time-app/.git
+                    
+            cd /app/numa-time-app
             git pull origin main
-                   
+                    
             docker compose pull
             docker compose down
             docker compose up -d
             docker image prune -f
+                    
