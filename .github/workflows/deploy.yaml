@@ -3,6 +3,7 @@ name: CI/CD for time-app project
 on:
   push:
     branches: ["master"]
+  workflow_dispatch: 
 
 env:
   REGISTRY: gchr.io
@@ -10,6 +11,7 @@ env:
 
 jobs:
   test:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
 
     strategy:
@@ -39,6 +41,7 @@ jobs:
 
 
   build-and-deploy:
+    if: github.event_name == 'push'
     needs: test
     runs-on: ubuntu-latest    
 
@@ -64,7 +67,7 @@ jobs:
           docker push ${{secrets.DOCKER_USERNAME}}/time-app-front-fbes1237ru
 
   deploy:
-    needs: build-and-deploy
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: Cloning repository
