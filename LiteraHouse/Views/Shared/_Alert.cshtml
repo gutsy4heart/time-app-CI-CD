@@ -1,0 +1,18 @@
+﻿﻿@if (TempData.Keys.Any())
+{
+    @foreach (var key in TempData.Keys)
+    {
+        var alertClass = key switch
+        {
+            "Added" => "alert-success",
+            "Deleted" => "alert-danger",
+            "Error" => "alert-danger",
+            "Updated" => "alert-info",
+            _ => "alert-info"
+        };
+
+        <div class="alert @alertClass" role="alert">
+            @TempData[key]?.ToString()
+        </div>
+    }
+}

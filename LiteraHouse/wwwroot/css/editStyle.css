@@ -1,0 +1,76 @@
+﻿/* Стиль для страницы редактирования книги */
+/*.container {
+    max-width: 800px;
+    margin: 0 auto;
+}*/
+
+/* Заголовок */
+/*h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}*/
+
+/* Картинка обложки книги */
+/*.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+}*/
+
+/* Формы */
+/*.form-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+}*/
+
+/* Валидация для полей */
+/*input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: green;
+}*/
+
+/* Кнопки */
+/*.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }*/
+
+/* Адаптивность */
+/*@media (max-width: 767px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}*/

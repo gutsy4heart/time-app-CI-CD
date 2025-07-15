@@ -1,0 +1,44 @@
+name: CI/CD for LiteraHouse Project
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Клонирование репозитория
+        uses: actions/checkout@v4
+
+      - name: 🐳 Логин в Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: 🏗️ Сборка Docker-образа ASP.NET приложения
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest .
+
+      - name: 🚀 Публикация Docker-образа в Docker Hub
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest
+
+      - name: 🔐 Установка SSH ключа
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: 🖥️ Деплой на Azure VM по SSH
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.AZURE_VM_USER }}@${{ secrets.AZURE_VM_IP }} << 'EOF'
+            echo "📦 Скачиваем образ с Docker Hub"
+            docker pull ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest
+
+            echo "🛑 Удаляем старый контейнер (если есть)"
+            docker stop literahouse-container || true
+            docker rm literahouse-container || true
+
+            echo "🚀 Запускаем новый контейнер"
+            docker run -d --name literahouse-container -p 80:80 ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest
+          EOF

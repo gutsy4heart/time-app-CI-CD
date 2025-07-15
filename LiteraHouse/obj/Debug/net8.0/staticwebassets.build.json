@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "KfOsUlJrHmkweKZuGnLwfibS2VwWnqIY71lpwVrxy8Q=",
+  "Source": "LiteraHouse",
+  "BasePath": "_content/LiteraHouse",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "LiteraHouse\\wwwroot",
+      "Source": "LiteraHouse",
+      "ContentRoot": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\wwwroot\\",
+      "BasePath": "_content/LiteraHouse",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\wwwroot\\css\\editStyle.css",
+      "SourceId": "LiteraHouse",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\wwwroot\\",
+      "BasePath": "_content/LiteraHouse",
+      "RelativePath": "css/editStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\editStyle.css"
+    },
+    {
+      "Identity": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\wwwroot\\img\\placeholder.jpg",
+      "SourceId": "LiteraHouse",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\wwwroot\\",
+      "BasePath": "_content/LiteraHouse",
+      "RelativePath": "img/placeholder.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\placeholder.jpg"
+    }
+  ]
+}

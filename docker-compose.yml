@@ -1,0 +1,22 @@
+services:
+  app:
+    image: gutsy4heart/literahouse-api:latest
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - '8090:5042'
+  
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-container
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+    restart: always
+
+volumes:
+  mssql-data:

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteraHouse", "LiteraHouse\LiteraHouse.csproj", "{734E3FFD-759F-4D02-8FC9-92501D375C31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{734E3FFD-759F-4D02-8FC9-92501D375C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734E3FFD-759F-4D02-8FC9-92501D375C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734E3FFD-759F-4D02-8FC9-92501D375C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734E3FFD-759F-4D02-8FC9-92501D375C31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8F24257-15CA-4585-81AF-D43AA3888AB5}
+	EndGlobalSection
+EndGlobal
