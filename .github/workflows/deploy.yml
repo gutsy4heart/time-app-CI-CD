@@ -27,11 +27,11 @@ jobs:
       - name: 🔐 Установка SSH ключа
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.AZURE_VM_SSH_KEY }}
 
       - name: 🖥️ Деплой на Azure VM по SSH
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.AZURE_VM_USER }}@${{ secrets.AZURE_VM_IP }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no ${{ secrets.AZURE_VM_USERNAME }}@${{ secrets.AZURE_VM_HOST }} << 'EOF'
             echo "📦 Скачиваем образ с Docker Hub"
             docker pull ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest
 
