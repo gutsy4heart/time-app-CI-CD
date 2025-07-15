@@ -1,44 +1,66 @@
-name: CI/CD for LiteraHouse Project
+name: CI/CD for Literahouse
 
 on:
   push:
     branches: ["master"]
+
   workflow_dispatch:
 
+
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧾 Клонирование репозитория
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🐳 Логин в Docker Hub
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore and Build
+        run: |
+          dotnet restore LiteraHouse.sln
+          dotnet build LiteraHouse.sln --configuration Release --no-restore
+
+      - name: Run Tests
+        run: dotnet test LiteraHouse.sln --no-build --verbosity normal
+
+      - name: Docker login
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      - name: 🏗️ Сборка Docker-образа ASP.NET приложения
+      - name: Build and Push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/literahouse .
+          docker push ${{ secrets.DOCKER_USERNAME }}/literahouse
 
-      - name: 🚀 Публикация Docker-образа в Docker Hub
-        run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest
 
-      - name: 🔐 Установка SSH ключа
-        uses: webfactory/ssh-agent@v0.9.0
+  deploy:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Azure VM
+        uses: appleboy/ssh-action@v1
         with:
-          ssh-private-key: ${{ secrets.AZURE_VM_SSH_KEY }}
+          host: ${{ secrets.AZURE_VM_HOST }}
+          username: ${{ secrets.AZURE_VM_USERNAME }}
+          key: ${{ secrets.AZURE_VM_SSH_KEY }}
+          port: 22
+          script: |
+            if [ ! -d "/app/literahouse/.git" ]; then
+              git clone https://github.com/${{ github.repository }} /app/literahouse
+            fi
 
-      - name: 🖥️ Деплой на Azure VM по SSH
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.AZURE_VM_USERNAME }}@${{ secrets.AZURE_VM_HOST }} << 'EOF'
-            echo "📦 Скачиваем образ с Docker Hub"
-            docker pull ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest
+            cd /app/literahouse
+            git pull origin master
 
-            echo "🛑 Удаляем старый контейнер (если есть)"
-            docker stop literahouse-container || true
-            docker rm literahouse-container || true
-
-            echo "🚀 Запускаем новый контейнер"
-            docker run -d --name literahouse-container -p 80:80 ${{ secrets.DOCKER_USERNAME }}/literahouse-api:latest
-          EOF
+            docker compose pull
+            docker compose down
+            docker compose up -d
+            docker image prune -f
