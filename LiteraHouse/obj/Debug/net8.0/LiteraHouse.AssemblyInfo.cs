@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LiteraHouse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+692d8af5bb76611eff50361bd06d3481780e348a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09e24e5f32439bae5891626bcd21814f56dc186e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LiteraHouse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LiteraHouse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

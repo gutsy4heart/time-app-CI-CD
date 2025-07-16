@@ -1,4 +1,4 @@
-using LiteraHouse.Models;
+﻿using LiteraHouse.Models;
 using LiteraHouse.Repository.AddPost;
 using LiteraHouse.Repository.Concrete;
 using Microsoft.EntityFrameworkCore;
@@ -9,10 +9,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("Default");
+Console.WriteLine("📡 Строка подключения: " + connectionString);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(connectionString);
+    options
+        .UseSqlServer(connectionString, sqlOptions =>
+        {
+            sqlOptions.EnableRetryOnFailure();
+        })
+        .EnableSensitiveDataLogging()
+        .EnableDetailedErrors();
 });
 
 builder.Services.AddScoped<IBooksRepository, EFCoreBookRepository>();
@@ -30,9 +37,6 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-
 app.MapDefaultControllerRoute();
-
-
 
 app.Run();

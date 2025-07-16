@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bc1/IG4iuzM=",
+  "dgSpecHash": "V9T+LMPev78=",
   "success": true,
-  "projectFilePath": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\LiteraHouse.csproj",
+  "projectFilePath": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\LiteraHouse.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\murad\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\murad\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

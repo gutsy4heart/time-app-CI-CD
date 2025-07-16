@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\",
+  "WorkspaceRootPath": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|c:\\users\\murad\\desktop\\asp.net_\\literahouse\\literahouse\\migrations\\20250715140752_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|solutionrelative:literahouse\\migrations\\20250715140752_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|c:\\users\\murad\\desktop\\asp.net_\\literahouse\\literahouse\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|c:\\users\\murad\\desktop\\time-app-fbes_1_23_7_ru_ci_cd\\literahouse\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|solutionrelative:literahouse\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|c:\\users\\murad\\desktop\\asp.net_\\literahouse\\literahouse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|c:\\users\\murad\\desktop\\time-app-fbes_1_23_7_ru_ci_cd\\literahouse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|solutionrelative:literahouse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|c:\\users\\murad\\desktop\\time-app-fbes_1_23_7_ru_ci_cd\\literahouse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{734E3FFD-759F-4D02-8FC9-92501D375C31}|LiteraHouse\\LiteraHouse.csproj|solutionrelative:literahouse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250715140752_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\Migrations\\20250715140752_Initial.cs",
-              "RelativeDocumentMoniker": "LiteraHouse\\Migrations\\20250715140752_Initial.cs",
-              "ToolTip": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\Migrations\\20250715140752_Initial.cs",
-              "RelativeToolTip": "LiteraHouse\\Migrations\\20250715140752_Initial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\Program.cs",
+              "RelativeDocumentMoniker": "LiteraHouse\\Program.cs",
+              "ToolTip": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\Program.cs",
+              "RelativeToolTip": "LiteraHouse\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAcwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T14:07:52.962Z",
+              "WhenOpened": "2025-07-16T07:11:38.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\appsettings.json",
               "RelativeDocumentMoniker": "LiteraHouse\\appsettings.json",
-              "ToolTip": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\appsettings.json",
+              "ToolTip": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\appsettings.json",
               "RelativeToolTip": "LiteraHouse\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-04T16:14:29.876Z",
+              "WhenOpened": "2025-07-16T06:49:17.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\appsettings.Development.json",
               "RelativeDocumentMoniker": "LiteraHouse\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\appsettings.Development.json",
               "RelativeToolTip": "LiteraHouse\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-04T16:14:27.108Z",
+              "WhenOpened": "2025-07-16T06:48:39.342Z",
               "EditorCaption": ""
             }
           ]

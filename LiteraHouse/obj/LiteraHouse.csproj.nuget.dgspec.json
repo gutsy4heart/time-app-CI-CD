@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\LiteraHouse.csproj": {}
+    "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\LiteraHouse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\LiteraHouse.csproj": {
+    "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\LiteraHouse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\LiteraHouse.csproj",
+        "projectUniqueName": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\LiteraHouse.csproj",
         "projectName": "LiteraHouse",
-        "projectPath": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\LiteraHouse.csproj",
+        "projectPath": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\LiteraHouse.csproj",
         "packagesPath": "C:\\Users\\murad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\murad\\Desktop\\ASP.NET_\\LiteraHouse\\LiteraHouse\\obj\\",
+        "outputPath": "C:\\Users\\murad\\Desktop\\time-app-FBES_1_23_7_ru_CI_CD\\LiteraHouse\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\murad\\AppData\\Roaming\\NuGet\\NuGet.Config",
