@@ -854,3 +854,5 @@ C:\Users\murad\Desktop\time-app-FBES_1_23_7_ru_CI_CD\LiteraHouse\obj\Debug\net8.
 C:\Users\murad\Desktop\time-app-FBES_1_23_7_ru_CI_CD\LiteraHouse\obj\Debug\net8.0\LiteraHouse.pdb
 C:\Users\murad\Desktop\time-app-FBES_1_23_7_ru_CI_CD\LiteraHouse\obj\Debug\net8.0\LiteraHouse.genruntimeconfig.cache
 C:\Users\murad\Desktop\time-app-FBES_1_23_7_ru_CI_CD\LiteraHouse\obj\Debug\net8.0\ref\LiteraHouse.dll
+C:\Users\murad\Desktop\time-app-FBES_1_23_7_ru_CI_CD\LiteraHouse\bin\Debug\net8.0\Npgsql.dll
+C:\Users\murad\Desktop\time-app-FBES_1_23_7_ru_CI_CD\LiteraHouse\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
